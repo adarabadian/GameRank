@@ -1,0 +1,85 @@
+#app{
+    background-image: url("./Assets/Background.jpg");
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+}
+
+#appHeader{
+    height: 7%;
+}
+
+#appContent{
+    text-align: center;
+    color: white;
+    opacity: 0.95;
+    background-color: #040820a6;
+    height: calc(90% - 4px);
+    display: flex;
+}
+
+#appFooter{
+    background-color: #3f51b5;
+    height: 3%;
+    color: white;
+    padding-top: 4px;
+    text-align: center;
+}
+.appDivs{
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+/* Toastify */
+@media screen and (min-width: 500px) {
+    .Toastify__toast-container{
+        text-align: center !important;
+        width: 90% !important;
+    }
+}
+@media screen and (min-width: 700px) {
+    .Toastify__toast-container{
+        text-align: center !important;
+        width: 80% !important;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .Toastify__toast-container{
+        text-align: center !important;
+        width: 40% !important;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .Toastify__toast-container{
+        text-align: center !important;
+        width: 30% !important;
+    }
+}
+@media screen and (min-width: 1500px) {
+    .Toastify__toast-container{
+        text-align: center !important;
+        width: 25% !important;
+    }
+}
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+
+
+
+@media screen and (max-width: 1919px) {
+    #appContent{
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-height: 770px) {
+    #appFooter{
+        margin-top: -2px;
+    }
+}

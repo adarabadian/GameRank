@@ -1,0 +1,162 @@
+.gamePage{
+    display: flex;
+    height: -webkit-fill-available;
+}
+
+.gamePage >*{
+    height: 100%;
+    width: 33%;
+    padding: 10px;
+}
+
+.gamePage > .gameCard > .name{
+    font-size: 260%;
+    margin-bottom: 2%;
+}    
+
+.gamePage > .gameCard > div > .generalInfoDiv > img{
+    max-width: 15%;
+}
+
+.gamePage > .gameCard > .gamePic{
+    width: 100%;
+    height: 18rem;
+    object-fit: contain;
+} 
+
+
+.gamePage > .gameCard > p{
+    width: calc(80% + 15px);
+    margin-left: 10% ;
+    margin-right: calc(10% - 15px);
+    overflow-y: auto ;
+} 
+
+.gamePage > .gameCard {
+    width: 35%;
+    border-right: 3px rgba(255, 255, 255, 0.524) solid;
+}
+
+
+.gamePage > .gameCard,
+.gamePage > #gameDeals {
+    border-right: 3px rgba(255, 255, 255, 0.524) solid;
+}
+
+.gamePage > #gameDeals > .loaderDiv > span {
+    left: calc( 50% - 150px);
+}
+
+.gamePage > .gameCard > #gameDealsModal{
+    display: none;
+}
+
+.gamePage > #gameDeals > .tableContainer{
+    display: inline;
+}
+
+.gamePage > * {
+    height: -webkit-fill-available;
+}
+/*
+ *  OVER FLOW
+ */
+.gamePage > .gameCard > p::-webkit-scrollbar-track,
+.gamePage > #gameDeals::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+    border-radius: 10Px;
+}
+.gamePage > .gameCard > p::-webkit-scrollbar,
+.gamePage > #gameDeals::-webkit-scrollbar{
+    width: 10px;
+    background-color: #F5F5F5;
+    border-radius: 10Px;
+    
+}
+.gamePage > .gameCard > p::-webkit-scrollbar-thumb,
+.gamePage > #gameDeals::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+                                       left bottom,
+                                       left top,
+                                       color-stop(0.33, rgb(122,153,217)),
+                                       color-stop(0.67, rgb(128, 91, 216)),
+                                       color-stop(0.100, rgb(145, 60, 179)));
+}
+
+.gamePage > .gameCard > img{
+    margin: 5% auto;
+}
+
+@media screen and (max-width: 1050px) {
+    .gamePage{
+        flex-direction: column;
+        width: 100%;
+        overflow-x: hidden;
+        padding-bottom: 3%;
+    }
+    
+    .gamePage > div{
+        width: 100% !important;
+        margin-top: 3%;
+        padding: 0;
+    }
+
+    .gamePage > .gameCard > .gamePic  {
+        height: 14em;
+    }
+
+    .gamePage > .gameCard > p {
+        width: 100%;
+        margin: 0;
+    }
+
+    .gamePage > #gameDeals{
+        height: 70%;
+    }
+    .gamePage > .gameCard > .name {
+        font-size: 2em;
+    }
+    
+    .gamePage > .gameCard > #gameCardGeneralInfo > .generalInfoDiv >h3{
+        font-size: 1.1em;
+    }
+
+    .gamePage > .gameCard > #gameCardGeneralInfo {
+        height: 3.3em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .gamePage > div{
+        width: 100% !important;
+        margin: 1.5% 0;
+        padding: 0;
+    }
+}
+
+
+@media screen and (max-width: 1050px) {
+    .gamePage > #gameDeals > div.tableContainer > table.bodyTable {
+        max-height: 75%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .gamePage > div >h1{
+        font-size: 2.5em !important;
+        padding: 0;
+        margin: 0;
+    }
+    .gamePage > #gameDeals > div.tableContainer > table.bodyTable {
+        max-height: 78%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .gamePage > #gameDeals > div.tableContainer > table.bodyTable {
+        max-height: 80%;
+    }
+}
