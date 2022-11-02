@@ -28,7 +28,7 @@ server.use(loginFilter());
 
 const corsOptions ={
     // 
-    origin:["https://adar-gamerank.herokuapp.com", "http://adar-gamerank.herokuapp.com", 
+    origin:["https://adar-gamerank.herokuapp.com", "http://adar-gamerank.herokuapp.com",
             'https://adar-projects-catalog.herokuapp.com', 'http://adar-projects-catalog.herokuapp.com'], 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200,

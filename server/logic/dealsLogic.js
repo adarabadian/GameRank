@@ -10,7 +10,6 @@ const getGameDeals = async (request) =>{
 
 const scrapeGame = async (gameName, platform) =>{
     const game = gameName + ' ' + platform;
-
     let url = "https://www.allkeyshop.com/blog/catalogue/search-" + game.replace(/ /g, "+") + "/";
     let html = await fetchHtml(url);
     let $ = cheerio.load(html);
@@ -54,11 +53,7 @@ const getGameId = async(url) =>{
     try {
         let html = await fetchHtml(url);
         let $ = cheerio.load(html);
-
-        if ($('html').find('.aks-follow-btn-score-green')[0] == undefined){
-            return $('html').find('.aks-follow-btn-score-grey')[0].attribs['data-product-id'];
-        }
-        return $('html').find('.aks-follow-btn-score-green')[0].attribs['data-product-id'];
+        return $('html').find('.aks-follow-btn-score')[0].attribs['data-product-id'];
     } catch (error) {
         return null;
     }
