@@ -92,7 +92,7 @@ export default function CustomGame(props: any) {
         <div className='customGameComponent'>
             {(deals == null && platforms == null) &&
                 <div>
-                    <h2>Not found - No problem!</h2>
+                    <h2>Not found? - No problem!</h2>
 
                     <p>
                         We didnt found your game, no worries though.<br></br>

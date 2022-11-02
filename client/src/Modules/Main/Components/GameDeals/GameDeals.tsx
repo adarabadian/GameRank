@@ -173,7 +173,9 @@ export default function GameDeals(props: any) {
                 <table ref={dealsTable} className='bodyTable'>
                     <tbody>
                         {(deals != undefined) &&
-                            deals.map((deal: Deal, index: number) => (
+                            [].concat(deals)
+                            .sort((a, b) => a.price > b.price ? 1 : -1)
+                            .map((deal: Deal, index: number) => (
                             <tr key={index}>
                                 <td>
                                     {deal.store}
