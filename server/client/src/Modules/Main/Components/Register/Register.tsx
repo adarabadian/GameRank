@@ -140,7 +140,7 @@ export default function Register() {
         };
 
         try {
-            await axios.post("https://adar-gamerank.herokuapp.com/users", user);
+            await axios.post("https://gamerank.onrender.com/users", user);
             
             navigate('/emailvalidation',  {state: user.email});
         } catch (err: any) {

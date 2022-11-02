@@ -40,7 +40,7 @@ export default function GameReviews(props: any) {
     
     const getUserReviews = async () =>{
         setIsLoading(true);
-            const response = await axios.get("https://adar-gamerank.herokuapp.com/ranks", {params: { gameId: game.id}});
+            const response = await axios.get("https://gamerank.onrender.com/ranks", {params: { gameId: game.id}});
             setReviews(response.data);
 
             let gameCopy = JSON.parse(JSON.stringify(game));

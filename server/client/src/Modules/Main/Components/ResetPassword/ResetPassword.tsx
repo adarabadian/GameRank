@@ -62,7 +62,7 @@ export default function ResetPassword() {
         }
 
         try {
-            await axios.post("https://adar-gamerank.herokuapp.com/users/sendResetPassVerCode", {email:email})
+            await axios.post("https://gamerank.onrender.com/users/sendResetPassVerCode", {email:email})
          
             setIsLoading(false);
             navigate('/resetpasswordconfirmation', {state: {email:email, pwd: password}});

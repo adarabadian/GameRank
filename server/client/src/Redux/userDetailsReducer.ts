@@ -9,9 +9,9 @@ import type { RootState } from "./store";
 export const getUser = createAsyncThunk('userDetails/updateUser',
     async (user: any, thunkAPI) => {
         try{
-            const response = await axios.post("https://adar-gamerank.herokuapp.com/users/login",user);
+            const response = await axios.post("https://gamerank.onrender.com/users/login",user);
             localStorage.setItem("token", response.data.token);
-            const socket = await io("https://adar-gamerank.herokuapp.com/", {query : {"token" : response.data.token}});
+            const socket = await io("https://gamerank.onrender.com/", {query : {"token" : response.data.token}});
             response.data.socket = socket;
     
             thunkAPI.dispatch({ type: logInUser, payload: response.data });
@@ -28,9 +28,9 @@ export const loginWithToken = createAsyncThunk('userDetails/loginWithToken',
     async (token: any, thunkAPI) => {
         try{
             axios.defaults.headers.common['authorization'] = "Bearer " + token;
-            const response = await axios.post("https://adar-gamerank.herokuapp.com/users/logUserWithToken",token);
+            const response = await axios.post("https://gamerank.onrender.com/users/logUserWithToken",token);
             localStorage.setItem("token", response.data.token);
-            const socket = await io("https://adar-gamerank.herokuapp.com/", {query : {"token" : response.data.token}});
+            const socket = await io("https://gamerank.onrender.com/", {query : {"token" : response.data.token}});
             response.data.socket = socket;
     
             thunkAPI.dispatch({ type: logInUser, payload: response.data });

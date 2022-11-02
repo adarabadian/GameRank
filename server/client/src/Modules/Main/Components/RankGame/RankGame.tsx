@@ -42,7 +42,7 @@ export default function RankGame() {
 
         if (game.userScore != null || userDetails != undefined){
             axios.defaults.headers.common['authorization'] = "Bearer " + userDetails.token;
-            let userRank = await axios.get("https://adar-gamerank.herokuapp.com/ranks/getUserRank/" + game.id);
+            let userRank = await axios.get("https://gamerank.onrender.com/ranks/getUserRank/" + game.id);
             
             if (userRank == undefined || userRank.data.length == 0){
                 setIsLoading(false);
@@ -159,7 +159,7 @@ export default function RankGame() {
 
         try {
             axios.defaults.headers.common['authorization'] = "Bearer " +  userDetails.token;
-            await axios.post("https://adar-gamerank.herokuapp.com/ranks", rank);
+            await axios.post("https://gamerank.onrender.com/ranks", rank);
 
             let updatedGame = await updateGameScore(game, rank.score, game.userScore);
             updateGameReviews(updatedGame, rank, updatedGame.userScore);

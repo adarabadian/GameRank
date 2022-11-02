@@ -13,7 +13,7 @@ export const getGames = createAsyncThunk('GamesState/getGames',
                 axios.defaults.headers.common['authorization'] = "Bearer " + token;
             }
 
-            const response = await axios.get("https://adar-gamerank.herokuapp.com/games");
+            const response = await axios.get("https://gamerank.onrender.com/games");
             return response.data;
         } catch (err: any) {
             if (err.response.data.error !== undefined){

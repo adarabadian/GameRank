@@ -104,7 +104,7 @@ function Header() {
         setIsLoading(true);
         let token = userDetails.token;
         axios.defaults.headers.common['authorization'] = "Bearer " + token;
-        await axios.post("https://adar-gamerank.herokuapp.com/users/logOutUser/");
+        await axios.post("https://gamerank.onrender.com/users/logOutUser/");
         // GamesUtils.getGamesFromServer('', dispatch);
 
         dispatch({type: logOffUser});

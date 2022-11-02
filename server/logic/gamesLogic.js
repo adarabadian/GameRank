@@ -31,7 +31,7 @@ const getGameData = async (gameId) =>{
 
 // need to attach for each pic the url
 const setGamePicture = (picture) =>{
-    const hostUrl = "https://adar-gamerank.herokuapp.com/";
+    const hostUrl = "https://gamerank.onrender.com/";
     return hostUrl + picture;
 }
 

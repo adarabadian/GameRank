@@ -72,7 +72,7 @@ export default function GameDeals(props: any) {
         setIsLoading(true);
         try {
             const response = await axios.get(
-                "https://adar-gamerank.herokuapp.com/deals",
+                "https://gamerank.onrender.com/deals",
                 { params: { game: game.name, platform: platformFilter } }
             );
             setDeals(response.data.deals.sort((a:Deal, b:Deal) => a.price - b.price))

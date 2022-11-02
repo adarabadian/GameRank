@@ -22,7 +22,7 @@ export default function CustomGame(props: any) {
         setIsLoading(true);
         try {
             const response = await axios.get(
-                "https://adar-gamerank.herokuapp.com/deals/getPlatforms",
+                "https://gamerank.onrender.com/deals/getPlatforms",
                 { params: { gameName: props.searchValue } }
             );
             
@@ -42,7 +42,7 @@ export default function CustomGame(props: any) {
         setIsLoading(true);
         try {
             const response = await axios.get(
-                "https://adar-gamerank.herokuapp.com/deals/getDealsByGameId",
+                "https://gamerank.onrender.com/deals/getDealsByGameId",
                 { params: { gameId: platform.gameId, platform : platform.platform} }
             );
             
@@ -79,7 +79,7 @@ export default function CustomGame(props: any) {
 
     const scrapeCustomGame = async (gameFound : String) =>{
         const response = await axios.get(
-            "https://adar-gamerank.herokuapp.com/deals",
+            "https://gamerank.onrender.com/deals",
             { params: { game: gameFound, platform: ''} }
         );
         

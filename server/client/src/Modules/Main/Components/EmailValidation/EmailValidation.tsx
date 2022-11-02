@@ -22,7 +22,7 @@ export default function EmailValidation(props: any) {
         };
 
         try {
-            await axios.post("https://adar-gamerank.herokuapp.com/users/checkVerCode", data);
+            await axios.post("https://gamerank.onrender.com/users/checkVerCode", data);
             
             toast.success("User activated successfully! Please log in to continue!");
             navigate('/login');            

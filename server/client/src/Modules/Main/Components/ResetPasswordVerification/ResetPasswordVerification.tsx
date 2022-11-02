@@ -31,7 +31,7 @@ export default function ResetPasswordVerification(props: any) {
         // prevent reload on submit
         e.preventDefault();
         try {
-            await axios.post("https://adar-gamerank.herokuapp.com/users/resetPassword", {email: email, password: pwd, verCode: verCode});
+            await axios.post("https://gamerank.onrender.com/users/resetPassword", {email: email, password: pwd, verCode: verCode});
             setIsLoading(false);
             
             toast.success("Success! Your password was updated, you can log in now.")
