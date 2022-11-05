@@ -44,6 +44,8 @@ router.post("/isUserExists", async(request, response, next) => {
         response.json(result);
     }
     catch(error){
+        console.log('aaaaaaaaaaaaaaaaaaaaaaaaa');
+        console.log(error);
         next(error);
     }
 });
