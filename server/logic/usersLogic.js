@@ -17,7 +17,7 @@ const login = async(userData) =>  {
     let successfullLoginData = await usersDao.login(userData.email, userData.password);
 
     if (successfullLoginData == undefined){
-        throw new ServerError(ErrorType.WRONG_EMAIL_OR_PASSWORD);
+        throw new ServerError(ErrorType.WRONG_EMAIL_OR_PASSWORD, 'aaa', 'bbb');
     }
 
     checkIfUserValidated(successfullLoginData.verCode, successfullLoginData.email);
