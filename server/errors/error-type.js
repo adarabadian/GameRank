@@ -44,4 +44,4 @@ let ErrorType = {
 
 }
 
-module.exports = ErrorType
+module.exports = ErrorType;
