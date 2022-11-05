@@ -1,0 +1,55 @@
+Button > span {
+    font-size:200%;
+    font-weight: 700;
+    font-family: 'Kalam';
+}
+
+
+.MuiToolbar-root, .MuiToolbar-regular, .MuiToolbar-gutters{
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+
+#homeLink{
+    font-family: 'Kalam' !important;
+    margin: 0;
+    padding: 0;
+}
+
+#appHeader > .header,
+#appHeader > .header > header,
+#appHeader > .header > header > div{
+    height: 100%;
+}
+
+#appHeader > .header > header {
+    padding: 0 2%;
+}
+
+header > div > button,
+header > div {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.MuiToolbar-regular {
+    min-height: 0 !important;
+}
+
+@media screen and (max-width: 750px) {
+    #homeLink{
+        justify-content: start;
+    }
+    
+    #pageHeaderBtn{
+        justify-content: end;
+    }
+    
+    header > div > button{
+        width: 50%;
+    }
+
+    header > div > button  > span{
+        font-size: 1.4em;
+    }    
+}

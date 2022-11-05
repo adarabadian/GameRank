@@ -1,0 +1,112 @@
+#selectPlatformDialog > .MuiDialog-container > .MuiPaper-root{
+    margin: 0;
+    padding: 10px;
+    width: 20%;
+    overflow: hidden !important;
+}
+
+#selectPlatformDialog > .MuiDialog-container > .MuiPaper-root > button{
+    margin: 15px auto 5px auto;
+    width: 90%;
+}
+
+#dialogHeaderContainer{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#dialogHeaderContainer > .MuiBox-root{
+    text-align: end;
+}
+
+.ReactModal__Content{
+    width: 80%;
+    height: 80%;
+    overflow: hidden !important;
+    color: white;
+    background: url(../../../../Assets/DealsTableBackground.jpg) !important;
+}
+
+.ReactModal__Content >.MuiBox-root > .MuiButtonBase-root{
+    width: 3%;
+    float: right;
+}
+
+.ReactModal__Content > .MuiBox-root > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root{
+    color: white;
+    border-radius: 16px;
+    padding: 3px;
+}
+
+.ReactModal__Content > #gameDeals > div > span{
+    left: calc( 50% - 150px);
+}
+
+@media screen and (max-width: 700px) {
+    #selectPlatformDialog,
+    #selectPlatformDialog > .MuiDialog-container > div,
+    Select{
+        width: 100%;
+    }
+
+    #selectPlatformDialog > .MuiDialog-container,
+    .platformSelect{
+        width: 80%;
+        margin: auto;
+    }
+
+    #selectPlatformDialog>.MuiDialog-container>.MuiPaper-root{
+        width: 80% !important;
+    }
+
+    .ReactModalPortal > .ReactModal__Overlay > .ReactModal__Content {
+        width: 96%;
+        padding: 4% 2% 0 2% !important;
+    }
+
+    .ReactModal__Content > .MuiBox-root > button > span.MuiIconButton-label > svg {
+        margin-top: -23px;
+        background: gray;
+    }
+
+    #gameDeals  > .tableContainer > table >tbody > tr > td:first-child, 
+    #gameDeals  > .tableContainer > table > tbody > tr > th:first-child,
+    #gameDeals  > .tableContainer > table >tbody > tr > td:nth-child(2), 
+    #gameDeals  > .tableContainer > table > tbody > tr > th:nth-child(2){
+        width: 25%;
+    }
+
+    #gameDeals  > .tableContainer > table >tbody > tr > td:last-child, 
+    #gameDeals  > .tableContainer > table > tbody > tr > th:last-child{
+        width: 50%;
+    }
+
+    #gameDeals  > .tableContainer > table >tbody{
+        overflow-x: scroll;
+    }
+
+    #gameDeals  > .tableContainer > table >tbody > tr > td > button >a:first-child,
+    #gameDeals  > .tableContainer > table > tbody > tr > th:first-child, 
+    #gameDeals  > .tableContainer > table >tbody > tr > td:first-child, 
+    #gameDeals  > .tableContainer > table >tbody > tr > td:first-child {
+        display: none;
+    }
+
+    #gameDeals > h1{
+        font-size: 2.5em !important;
+        padding: 0;
+        margin: 0;
+    }
+
+    #gameDeals > h1 > a:first-child{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    #gameDeals > h1{
+        font-size: 1.7em !important;
+    }
+}

@@ -1,0 +1,60 @@
+.review{
+    text-align: left;
+}
+
+.review > *{
+    margin: 0;
+    padding: 0;
+}
+
+.reviewHeader{
+    width: 100%;
+    padding: 5px 0;
+    display: inline-flex;
+}
+
+.reviewHeader > .reviewLeft{
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.reviewHeader > .reviewLeft > h2{
+    margin: 0 0 3px 0;
+}
+
+.reviewHeader > .reviewRight{
+    text-align: right;
+    width: 30%;
+    margin: 0;
+    padding: 0;
+}
+
+.reviewHeader > .reviewRight > *{
+    margin: 0;
+    padding: 0 1%;
+    display: block;
+    margin: auto;
+}
+.reviewScoreColorful{
+    animation : fontColorRotate 10s linear 0s infinite;
+    text-shadow: none;
+}
+
+@keyframes fontColorRotate {
+    from {
+        color: #6666ff;
+    }
+    10% {
+        color: #0099ff;
+    }
+    50% {
+        color: #00ff00;
+    }
+    75% {
+        color: #ff3399;
+    }
+    100% {
+        color: #6666ff;
+    }
+  }
