@@ -32,7 +32,7 @@ let ErrorType = {
 	INCORRECT_CODE: {
 		id: 6,
 		httpCode: 605,
-		message: "The verification code you submitted is not correct.\n We've sent a new code to your email address.",
+		message: "The verification code you submitted is not correct. \nWe've sent a new code to your email address.",
 		isShowStackTrace: true,
 	},
 	USER_NOT_VALIDATED: {

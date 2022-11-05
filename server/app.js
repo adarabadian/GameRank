@@ -13,6 +13,7 @@ const path = require('path');
 
 const port = process.env.PORT || 3000;
 
+server.use(errorHandler);
 server.use(express.static(path.join(__dirname, './build')));
 
 
@@ -41,5 +42,3 @@ server.use("/users", usersController);
 server.use("/games", gamesController);
 server.use("/ranks", ranksController);
 server.use("/deals", dealsController);
-
-server.use(errorHandler);
