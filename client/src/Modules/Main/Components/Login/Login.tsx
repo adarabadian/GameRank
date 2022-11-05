@@ -30,6 +30,18 @@ export default function Login() {
         });
     };
     
+    const err = (message: string) => {
+        toast.error(message, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    };
+    
     useEffect(() => {
         checkBtnValidity();
     },[userName, password]);
@@ -73,12 +85,12 @@ export default function Login() {
         
         if (res.payload.response && res.payload.response.status !== 200) {
             if (res.payload.response.status == 606){
-                toast.warn(res.payload.response.data.error);
+                warn(res.payload.response.data.error);
                 navigate('/emailvalidation', {state: userName});
                 return;
             }
             if (res.payload.response.status == 602){
-                toast.error(res.payload.response.data.error);
+                err(res.payload.response.data.error);
                 return;
             }            
         }
