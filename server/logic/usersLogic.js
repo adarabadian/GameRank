@@ -14,9 +14,14 @@ const login = async(userData) =>  {
     userData.password = createHashPassword(userData.password);
 
     // callback to dao login function
+    console.log('a');
     let successfullLoginData = await usersDao.login(userData.email, userData.password);
+    console.log('b' + successfullLoginData);
 
     if (successfullLoginData == undefined){
+        console.log('c');
+        console.log('aaaa' + ServerError(ErrorType.WRONG_EMAIL_OR_PASSWORD));
+        console.log('aaaa');
         throw new ServerError(ErrorType.WRONG_EMAIL_OR_PASSWORD);
     }
 
