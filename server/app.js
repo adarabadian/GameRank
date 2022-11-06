@@ -11,7 +11,6 @@ const cors = require("cors");
 const server = express();
 const path = require('path');
 
-server.use(express.json());
 const port = process.env.PORT || 3000;
 
 server.use(express.static(path.join(__dirname, './build')));
@@ -24,6 +23,7 @@ socketHandler.initSocketIo(portListened);
 corsController.handleCors(server);
 
 server.use(express.static('./uploads'));
+server.use(express.json());
 server.use(loginFilter());
 
 const corsOptions = {

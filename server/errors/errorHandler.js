@@ -1,6 +1,7 @@
 const errorHandler = (error, request, response, next) => {
     if (error.errorType !== undefined && error.errorType.isShowStackTrace){
         response.status(error.errorType.httpCode).json({error: error.errorType.message});
+        console.log(response);
         return;
     }
 
