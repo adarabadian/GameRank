@@ -13,8 +13,13 @@ router.post("/login", async(request, response, next) => {
         response.json(successfullLoginData);
     }
     catch(error){
-        console.log(error);
-        response(error)
+        console.log('aaaaa');
+        response(error);
+        console.log('bbbbb');
+        next(error);
+        console.log('ccc');
+        return next(error);
+        console.log('dddd');
     }
 });
 
