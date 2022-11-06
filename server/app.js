@@ -10,11 +10,20 @@ const loginFilter = require("./middlewares/loginFilter");
 const cors = require("cors");
 const server = express();
 const path = require('path');
+const bodyParser = require('body-parser');
+const router = express.Router();
 
 const port = process.env.PORT || 3000;
 
 server.use(express.static(path.join(__dirname, './build')));
 
+router.use(function(err, req, res, next) {
+    res.status(500).json(JSON.stringify({
+        error: err
+    }));
+});
+
+module.exports = router;
 
 const portListened = server.listen(port, () => console.log("listening on port " + port));
 
@@ -36,7 +45,8 @@ const corsOptions = {
 	optionSuccessStatus: 200,
 }
 
-server.use(cors(corsOptions))
+server.use('/', router);
+server.use(cors(corsOptions));
 
 server.use("/users", usersController);
 server.use("/games", gamesController);
