@@ -34,7 +34,7 @@ const corsOptions = {
 	optionSuccessStatus: 200,
 }
 
-server.use('/', router);
+// server.use('/', router);
 server.use(cors(corsOptions));
 
 server.use("/users", usersController);
