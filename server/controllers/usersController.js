@@ -15,11 +15,10 @@ router.post("/login", async(request, response, next) => {
     catch(error){
         // console.log('aaaaa');
         // response(error);
-        console.log('bbbbb');
+        console.log('aaaaa');
+        console.log(next);
+        console.log('aaaaa');
         next(error);
-        console.log('ccc');
-        return next(error);
-        console.log('dddd');
     }
 });
 
