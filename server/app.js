@@ -11,6 +11,7 @@ const cors = require("cors");
 const server = express();
 const path = require('path');
 
+server.use(express.json());
 const port = process.env.PORT || 3000;
 
 server.use(express.static(path.join(__dirname, './build')));
@@ -23,19 +24,18 @@ socketHandler.initSocketIo(portListened);
 corsController.handleCors(server);
 
 server.use(express.static('./uploads'));
-server.use(express.json());
 server.use(loginFilter());
 
-const corsOptions ={
-        origin:["https://gamerank.onrender.com", "http://gamerank.onrender.com", 'http://adar-projects-catalog.onrender.com', 
-                'https://adar-projects-catalog.onrender.com', 
-                'http://localhost:3000','https://localhost:3000',
-                'https://adar-projects-catalog.herokuapp.com', 'http://adar-projects-catalog.herokuapp.com'], 
-        credentials:true,            //access-control-allow-credentials:true
-        optionSuccessStatus:200,
+const corsOptions = {
+	origin: ["https://gamerank.onrender.com", "http://gamerank.onrender.com", 'http://adar-projects-catalog.onrender.com',
+		'https://adar-projects-catalog.onrender.com',
+		'http://localhost:3000', 'https://localhost:3000',
+		'https://adar-projects-catalog.herokuapp.com', 'http://adar-projects-catalog.herokuapp.com'],
+	credentials: true,            //access-control-allow-credentials:true
+	optionSuccessStatus: 200,
 }
- 
- server.use(cors(corsOptions)) 
+
+server.use(cors(corsOptions))
 
 server.use("/users", usersController);
 server.use("/games", gamesController);
