@@ -28,7 +28,7 @@ server.use(loginFilter());
 
 const corsOptions = {
 	origin: ["https://gamerank.onrender.com", "http://gamerank.onrender.com", 'http://adar-projects-catalog.onrender.com',
-		'https://adar-projects-catalog.onrender.com',
+		'https://adar-projects-catalog.onrender.com', '*',
 		'http://localhost:3000', 'https://localhost:3000',
 		'https://adar-projects-catalog.herokuapp.com', 'http://adar-projects-catalog.herokuapp.com'],
 	credentials: true,            //access-control-allow-credentials:true
