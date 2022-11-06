@@ -28,7 +28,10 @@ router.post("/", async(request, response, next) => {
         response.json(successfullLoginData);
     }
     catch(error){
-        next(error);
+        return res.status(400).send({
+            message: 'This is an error!'
+         });
+        // next(error);
     }
 });
 
