@@ -41,4 +41,8 @@ server.use("/users", usersController);
 server.use("/games", gamesController);
 server.use("/ranks", ranksController);
 server.use("/deals", dealsController);
-server.use(errorHandler);
+
+// error handler
+app.use((err, req, res, next) => {
+	res.status(784).send(err.message)
+  })
