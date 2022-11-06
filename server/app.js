@@ -10,20 +10,10 @@ const loginFilter = require("./middlewares/loginFilter");
 const cors = require("cors");
 const server = express();
 const path = require('path');
-const bodyParser = require('body-parser');
-const router = express.Router();
 
 const port = process.env.PORT || 3000;
 
 server.use(express.static(path.join(__dirname, './build')));
-
-router.use(function(err, req, res, next) {
-    res.status(500).json(JSON.stringify({
-        error: err
-    }));
-});
-
-module.exports = router;
 
 const portListened = server.listen(port, () => console.log("listening on port " + port));
 
@@ -36,9 +26,8 @@ server.use(express.json());
 server.use(loginFilter());
 
 const corsOptions = {
-	// origin: ["https://gamerank.onrender.com", "http://gamerank.onrender.com", 'http://adar-projects-catalog.onrender.com',
-	// 	'https://adar-projects-catalog.onrender.com', '*',
-	// 	'http://localhost:3000', 'https://localhost:3000',
+	// origin: ["https://gamerank.onrender.com", "http://gamerank.onrender.com", 
+	// 	'https://adar-projects-catalog.onrender.com', 'http://adar-projects-catalog.onrender.com',
 	// 	'https://adar-projects-catalog.herokuapp.com', 'http://adar-projects-catalog.herokuapp.com'],
 	origin: '*',
 	credentials: true,            //access-control-allow-credentials:true
