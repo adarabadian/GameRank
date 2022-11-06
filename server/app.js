@@ -34,15 +34,10 @@ const corsOptions = {
 	optionSuccessStatus: 200,
 }
 
-// server.use('/', router);
 server.use(cors(corsOptions));
 
 server.use("/users", usersController);
 server.use("/games", gamesController);
 server.use("/ranks", ranksController);
 server.use("/deals", dealsController);
-
-// error handler
-app.use((err, req, res, next) => {
-	res.status(784).send(err.message)
-  })
+server.use(errorHandler);
