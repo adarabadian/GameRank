@@ -1,5 +1,6 @@
 const express = require("express");
-const errorHandler = require("./errors/errorHandler");
+// const errorHandler = require("./errors/errorHandler");
+const errorhandler = require('errorhandler')
 const usersController = require("./controllers/usersController");
 const gamesController = require("./controllers/gamesController");
 const ranksController = require("./controllers/ranksController");
@@ -40,4 +41,6 @@ app.use("/users", usersController);
 app.use("/games", gamesController);
 app.use("/ranks", ranksController);
 app.use("/deals", dealsController);
-app.use(errorHandler);
+app.use(errorhandler())
+
+// app.use(errorHandler);
