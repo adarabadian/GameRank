@@ -1,10 +1,12 @@
 const errorHandler = (error, request, response, next) => {
+    console.log(error);
     if (error.errorType !== undefined && error.errorType.isShowStackTrace){
-        response.status(error.errorType.httpCode).send(error.errorType.message);
+        console.log('aaa');
+        response.json(error);
         return;
     }
 
-    response.status(700).json({error:"A general error has occured!"});
+    response.json(error);
 }
 
 module.exports = errorHandler;
