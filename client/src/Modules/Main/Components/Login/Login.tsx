@@ -84,15 +84,15 @@ export default function Login() {
         setIsLoading(false);
         
         if (res.payload.response && res.payload.response.status !== 200) {
-            console.log(res.payload.response);
+            console.log(res.payload.response.data.error);
             
-            if (res.payload.response.error.includes('validated')){
-                warn(res.payload.response.error);
+            if (res.payload.response.data.error.includes('validated')){
+                warn(res.payload.response.data.error);
                 navigate('/emailvalidation', {state: userName});
                 return;
             }
 
-            err(res.payload.response.error);
+            err(res.payload.response.data.error);
         }
     };
 

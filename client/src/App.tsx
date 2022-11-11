@@ -16,6 +16,11 @@ import ResetPassword from "./Modules/Main/Components/ResetPassword/ResetPassword
 import ResetPasswordVerification from "./Modules/Main/Components/ResetPasswordVerification/ResetPasswordVerification";
 
 export function App() {
+	if(process.env.ENVIRONMENT !== "development"){
+		console.log = () => {}
+		console.error = () => {}
+	}
+
 	return (
 	    <div id="app">
 	        <ToastContainer
