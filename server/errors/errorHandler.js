@@ -1,8 +1,7 @@
 const errorHandler = (error, request, response, next) => {
     console.log(error);
     if (error.errorType !== undefined && error.errorType.isShowStackTrace){
-        response.status(321).send('Hello');
-        // response.status(error.errorType.httpCode).json({message: error.errorType.message});
+        response.status(501).json({message: 'TESTTESTTEST'});
         return;
     }
     
