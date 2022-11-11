@@ -84,6 +84,8 @@ export default function Login() {
         setIsLoading(false);
         
         if (res.payload.response && res.payload.response.status !== 200) {
+            console.log(res.payload.response);
+            
             if (res.payload.response.error.includes('validated')){
                 warn(res.payload.response.error);
                 navigate('/emailvalidation', {state: userName});
