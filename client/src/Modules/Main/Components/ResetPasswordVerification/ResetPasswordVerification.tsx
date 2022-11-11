@@ -38,7 +38,7 @@ export default function ResetPasswordVerification(props: any) {
             navigate('/login');
             
         } catch (err: any) {
-            if (err.response.status == 606){
+            if (err.response.message.includes('validated')){
                 toast.warn(err.response.data.error);
                 navigate(-1);
                 return;
