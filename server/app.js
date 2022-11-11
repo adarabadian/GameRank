@@ -26,7 +26,12 @@ app.use(express.json());
 app.use(loginFilter());
 
 const corsOptions = {
-	origin: '*',
+	origin:["https://gamerank.onrender.com", 
+			"http://gamerank.onrender.com", 
+			'http://adar-projects-catalog.onrender.com',
+			'https://adar-projects-catalog.onrender.com',
+			'https://adar-projects-catalog.herokuapp.com', 
+			'http://adar-projects-catalog.herokuapp.com'], 
 	credentials: true,
 	optionSuccessStatus: 200
 }
