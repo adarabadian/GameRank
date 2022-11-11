@@ -9,7 +9,7 @@ import type { RootState } from "./store";
 export const getUser = createAsyncThunk('userDetails/updateUser',
     async (user: any, thunkAPI) => {
         try{
-            const response = await axios.post("https://gamerank.onrender.com/users/login",user);
+            const response = await axios.post("https://gamerank.onrender.com/users/login", user, {headers: {'content-type': 'text/json'}});
             localStorage.setItem("token", response.data.token);
             const socket = await io("https://gamerank.onrender.com/", {query : {"token" : response.data.token}});
             response.data.socket = socket;
