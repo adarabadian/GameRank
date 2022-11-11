@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./Modules/Shared/Header/Header";
 import Footer from "./Modules/Shared/Footer/Footer";
-import React from "react";
+import React, { useEffect } from "react";
 import Landing from "./Modules/LandingPage/Components/Home/Landing";
 import GameBoard from "./Modules/Main/Components/GameBoard/GameBoard";
 import Login from "./Modules/Main/Components/Login/Login";
@@ -14,12 +14,14 @@ import RankGame from "./Modules/Main/Components/RankGame/RankGame";
 import EmailValidation from "./Modules/Main/Components/EmailValidation/EmailValidation";
 import ResetPassword from "./Modules/Main/Components/ResetPassword/ResetPassword";
 import ResetPasswordVerification from "./Modules/Main/Components/ResetPasswordVerification/ResetPasswordVerification";
+import { GlobalDebug } from "./Utils/remove-consoles";
 
-export function App() {
-	if(process.env.ENVIRONMENT !== "development"){
-		console.log = () => {}
-		console.error = () => {}
-	}
+export function App() {  
+	useEffect(() => {
+		(process.env.NODE_ENV === "production" ||
+		 process.env.REACT_APP_ENV === "STAGING") &&
+		  GlobalDebug(false);
+	  }, []);
 
 	return (
 	    <div id="app">
