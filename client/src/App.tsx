@@ -14,15 +14,8 @@ import RankGame from "./Modules/Main/Components/RankGame/RankGame";
 import EmailValidation from "./Modules/Main/Components/EmailValidation/EmailValidation";
 import ResetPassword from "./Modules/Main/Components/ResetPassword/ResetPassword";
 import ResetPasswordVerification from "./Modules/Main/Components/ResetPasswordVerification/ResetPasswordVerification";
-import { GlobalDebug } from "./Utils/remove-consoles";
 
-export function App() {  
-	useEffect(() => {
-		(process.env.NODE_ENV === "production" ||
-		 process.env.REACT_APP_ENV === "STAGING") &&
-		  GlobalDebug(false);
-	  }, []);
-
+export function App() {
 	return (
 	    <div id="app">
 	        <ToastContainer
