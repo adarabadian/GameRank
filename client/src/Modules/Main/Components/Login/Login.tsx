@@ -84,13 +84,13 @@ export default function Login() {
         setIsLoading(false);
         
         if (res.payload.response && res.payload.response.status !== 200) {
-            if (res.payload.response.message.includes('validated')){
+            if (res.payload.response.data.error.includes('validated')){
                 warn(res.payload.response.data.error);
                 navigate('/emailvalidation', {state: userName});
                 return;
             }
+            
             err(res.payload.response.data.error);
-            return; 
         }
     };
 
