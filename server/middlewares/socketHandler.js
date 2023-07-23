@@ -7,11 +7,9 @@ const initSocketIo = (server) =>{
     const socketIO = require('socket.io');
     
     const io = socketIO(server, {
-        origins : ["https://gamerank.onrender.com", "http://gamerank.onrender.com", 
-        'https://adar-projects-catalog.herokuapp.com', 'http://adar-projects-catalog.herokuapp.com'],
+        origins : ["https://gamerank.adarabadian.com", "http://gamerank.adarabadian.com"],
       cors: {
-        origin: ["https://gamerank.onrender.com", "http://gamerank.onrender.com", 
-                 'https://adar-projects-catalog.herokuapp.com', 'http://adar-projects-catalog.herokuapp.com'],
+        origin: ["https://gamerank.adarabadian.com", "http://gamerank.adarabadian.com"],
         methods: ["GET", "POST", "DELETE", "PUT"],
         credentials: true
       }

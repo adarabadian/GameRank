@@ -2,89 +2,89 @@
 @import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
 
 #landing > #landingHeader {
-    font-family: "Kalam", cursive;
-    font-size: 9.5rem;
-    margin-top: 0;
-    margin-bottom: 0;
+	font-family: "Kalam", cursive;
+	font-size: 9.5rem;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 #landing {
-    margin: 1% auto;
-    height: min-content;
-    width: 90%;
-    text-align: center;
-    color: white;
-    opacity: 0.95;
-    background-color: #040820a6;
+	margin: 1% auto;
+	height: min-content;
+	width: 90%;
+	text-align: center;
+	color: white;
+	opacity: 0.95;
+	background-color: #040820a6;
 }
 
 p, label {
-    font-size: 140%;
-    font-family: "Kalam";
-    line-height: 125%;
+	font-size: 140%;
+	font-family: "Kalam";
+	line-height: 125%;
 }
 
 #about {
-    -webkit-animation: scale-up-center 1.8s cubic-bezier(0.39, 0.575, 0.565, 1)
-        1s both;
-    animation: scale-up-center 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1s both;
+	-webkit-animation: scale-up-center 1.8s cubic-bezier(0.39, 0.575, 0.565, 1)
+		1s both;
+	animation: scale-up-center 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) 1s both;
 }
 
 button {
-    width: 20%;
-    outline: transparent;
-    font-size: 200%;
-    background: #8f3aff;
-    border-radius: 30px;
-    color: white;
-    margin-top: 3%;
-    padding: 6px 0;
-    font-family: "Handlee", cursive !important;
-    letter-spacing: 2px;
-    font-weight: 1000;
-    margin: auto 2%;
+	width: 20%;
+	outline: transparent;
+	font-size: 200%;
+	background: #8f3aff;
+	border-radius: 30px;
+	color: white;
+	margin-top: 3%;
+	padding: 6px 0;
+	font-family: "Handlee", cursive !important;
+	letter-spacing: 2px;
+	font-weight: 1000;
+	margin: auto 2%;
 }
 
 #gamesLinkBtn {
-    display: block;
-    margin: auto;
-    margin-top: 2em;
+	display: block;
+	margin: auto;
+	margin-top: 2em;
 }
 
 #buttonsDiv {
-    -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 3s
-        both;
-    animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 3s both;
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 3s
+		both;
+	animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 3s both;
 }
 
 #about > p{
-    width: 60%;
-    margin: 0 auto;
+	width: 60%;
+	margin: 0 auto;
 }
 
 .landingBtns{
-    display: inline !important;
-    margin: 1em 1em 0 1em !important;
-    text-align: center;
-    font-size: 32px;
-    font-family: monospace;
-    letter-spacing: 5px;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 8s infinite;
-    width: 30%;
+	display: inline !important;
+	margin: 1em 1em 0 1em !important;
+	text-align: center;
+	font-size: 32px;
+	font-family: monospace;
+	letter-spacing: 5px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 8s infinite;
+	width: 30%;
 }
 
 #buttonsDiv{
-    padding: 0 10%;
+	padding: 0 10%;
 }
 
 #buttonsDiv{
-    margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 
 .landingBtns:last-child{
-    margin-bottom: 1em !important;  
+	margin-bottom: 1em !important;	
 }
 
 @keyframes gradient {
@@ -100,231 +100,231 @@ button {
 }
 
 @-webkit-keyframes scale-up-center {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
+	0% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
 }
 @keyframes scale-up-center {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
+	0% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
 }
 /* ---------- */
 
 @-webkit-keyframes rgb {
-    0% {
-        background-color: rgb(255, 0, 149);
-    }
-    50% {
-        background-color: blue;
-    }
-    100% {
-        background-color: rgb(255, 0, 149);
-    }
+	0% {
+		background-color: rgb(255, 0, 149);
+	}
+	50% {
+		background-color: blue;
+	}
+	100% {
+		background-color: rgb(255, 0, 149);
+	}
 }
 @keyframes rgb {
-    0% {
-        background-color: rgb(255, 0, 149);
-    }
-    50% {
-        background-color: blue;
-    }
-    100% {
-        background-color: rgb(255, 0, 149);
-    }
+	0% {
+		background-color: rgb(255, 0, 149);
+	}
+	50% {
+		background-color: blue;
+	}
+	100% {
+		background-color: rgb(255, 0, 149);
+	}
 }
 
 /* ------------ */
 
 @-webkit-keyframes text-focus-in {
-    0% {
-        -webkit-filter: blur(12px);
-        filter: blur(12px);
-        opacity: 0;
-    }
-    100% {
-        -webkit-filter: blur(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
+	0% {
+		-webkit-filter: blur(12px);
+		filter: blur(12px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-filter: blur(0px);
+		filter: blur(0px);
+		opacity: 1;
+	}
 }
 @keyframes text-focus-in {
-    0% {
-        -webkit-filter: blur(12px);
-        filter: blur(12px);
-        opacity: 0;
-    }
-    100% {
-        -webkit-filter: blur(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
+	0% {
+		-webkit-filter: blur(12px);
+		filter: blur(12px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-filter: blur(0px);
+		filter: blur(0px);
+		opacity: 1;
+	}
 }
 
 #landing > #landingHeader {
-    -webkit-animation: jello-horizontal 0.9s both;
-    animation: jello-horizontal 0.9s both;
+	-webkit-animation: jello-horizontal 0.9s both;
+	animation: jello-horizontal 0.9s both;
 }
 /* --------- */
 
 @-webkit-keyframes jello-horizontal {
-    0% {
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
-    30% {
-        -webkit-transform: scale3d(1.25, 0.75, 1);
-        transform: scale3d(1.25, 0.75, 1);
-    }
-    40% {
-        -webkit-transform: scale3d(0.75, 1.25, 1);
-        transform: scale3d(0.75, 1.25, 1);
-    }
-    50% {
-        -webkit-transform: scale3d(1.15, 0.85, 1);
-        transform: scale3d(1.15, 0.85, 1);
-    }
-    65% {
-        -webkit-transform: scale3d(0.95, 1.05, 1);
-        transform: scale3d(0.95, 1.05, 1);
-    }
-    75% {
-        -webkit-transform: scale3d(1.05, 0.95, 1);
-        transform: scale3d(1.05, 0.95, 1);
-    }
-    100% {
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
+	0% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+	30% {
+		-webkit-transform: scale3d(1.25, 0.75, 1);
+		transform: scale3d(1.25, 0.75, 1);
+	}
+	40% {
+		-webkit-transform: scale3d(0.75, 1.25, 1);
+		transform: scale3d(0.75, 1.25, 1);
+	}
+	50% {
+		-webkit-transform: scale3d(1.15, 0.85, 1);
+		transform: scale3d(1.15, 0.85, 1);
+	}
+	65% {
+		-webkit-transform: scale3d(0.95, 1.05, 1);
+		transform: scale3d(0.95, 1.05, 1);
+	}
+	75% {
+		-webkit-transform: scale3d(1.05, 0.95, 1);
+		transform: scale3d(1.05, 0.95, 1);
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
 }
 @keyframes jello-horizontal {
-    0% {
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
-    30% {
-        -webkit-transform: scale3d(1.25, 0.75, 1);
-        transform: scale3d(1.25, 0.75, 1);
-    }
-    40% {
-        -webkit-transform: scale3d(0.75, 1.25, 1);
-        transform: scale3d(0.75, 1.25, 1);
-    }
-    50% {
-        -webkit-transform: scale3d(1.15, 0.85, 1);
-        transform: scale3d(1.15, 0.85, 1);
-    }
-    65% {
-        -webkit-transform: scale3d(0.95, 1.05, 1);
-        transform: scale3d(0.95, 1.05, 1);
-    }
-    75% {
-        -webkit-transform: scale3d(1.05, 0.95, 1);
-        transform: scale3d(1.05, 0.95, 1);
-    }
-    100% {
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
+	0% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+	30% {
+		-webkit-transform: scale3d(1.25, 0.75, 1);
+		transform: scale3d(1.25, 0.75, 1);
+	}
+	40% {
+		-webkit-transform: scale3d(0.75, 1.25, 1);
+		transform: scale3d(0.75, 1.25, 1);
+	}
+	50% {
+		-webkit-transform: scale3d(1.15, 0.85, 1);
+		transform: scale3d(1.15, 0.85, 1);
+	}
+	65% {
+		-webkit-transform: scale3d(0.95, 1.05, 1);
+		transform: scale3d(0.95, 1.05, 1);
+	}
+	75% {
+		-webkit-transform: scale3d(1.05, 0.95, 1);
+		transform: scale3d(1.05, 0.95, 1);
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
 }
 
 @media screen and (max-width: 1200px) {
-    #landing > #landingHeader{
+	#landing > #landingHeader{
 		font-size: 6em;
 	}
 
-    #about > p{
-        font-size: 1.2em;
-    }
+	#about > p{
+		font-size: 1.2em;
+	}
 
-    .landingBtns {
-        width: 30%;
-    }
+	.landingBtns {
+		width: 30%;
+	}
 }
 
 @media screen and (max-width: 1090px) {
-    #landing{
-        width: 100%;
-        padding: 0 3%;
-    }
+	#landing{
+		width: 100%;
+		padding: 0 3%;
+	}
 
-    #landing > #landingHeader{
+	#landing > #landingHeader{
 		font-size: 5em;
 	}
 
-    #about > p{
-        font-size: 1.1em;
-    }
+	#about > p{
+		font-size: 1.1em;
+	}
 
-    #about > p{
-        width: 80%;
-    }
-    .landingBtns {
-        width: 80%;
-    }
-    #buttonsDiv{
-        padding: 0 2%;
-    }
+	#about > p{
+		width: 80%;
+	}
+	.landingBtns {
+		width: 80%;
+	}
+	#buttonsDiv{
+		padding: 0 2%;
+	}
 }
 
 @media screen and (max-width: 700px) {
-    #landing > #landingHeader{
+	#landing > #landingHeader{
 		font-size: 4em;
 	}
-    
-    #about > p{
-        margin: 1%;
-    }
+	
+	#about > p{
+		margin: 1%;
+	}
 
-    .landingBtns {
-        width: 80%;
-        margin-top: 1rem !important;
-    }
+	.landingBtns {
+		width: 80%;
+		margin-top: 1rem !important;
+	}
 
-    #landing{
-        width: 100%;
-        padding: 0 3%;
-        height: fit-content;
-        margin: 0;
-    }
+	#landing{
+		width: 100%;
+		padding: 0 3%;
+		height: fit-content;
+		margin: 0;
+	}
 
-    #about > p{
-        width: 96%;
-    }
+	#about > p{
+		width: 96%;
+	}
 }
 
 @media screen and (max-width: 500px) {
-    #landing > #landingHeader{
+	#landing > #landingHeader{
 		font-size: 5em;
 	}
-    
-    #about > p{
-        font-size: 1.1em;
-    }
+	
+	#about > p{
+		font-size: 1.1em;
+	}
 }
 
 
 @media screen and (max-width: 420px) {
-    #landing > #landingHeader{
+	#landing > #landingHeader{
 		font-size: 3.5em;
 	}
-    
-    #about > p{
-        font-size: 1em;
-    }
-    
-    .landingBtns {
-        width: 90%;
-        margin: 3% auto !important;
-    }
+	
+	#about > p{
+		font-size: 1em;
+	}
+	
+	.landingBtns {
+		width: 90%;
+		margin: 3% auto !important;
+	}
 }

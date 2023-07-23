@@ -14,7 +14,8 @@ export default function GameDealsModal(props: Game) {
     const game : Game = props;
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isDialogOpen, setIsDialogOpen] = useState(false);
-    const [platform, setPlatform] = useState("PC");
+    let initialPlatform = game.isPc ? "PC" : game.isPs ? "PS" : game.isXbox ? "Xbox" : null;
+    const [platform, setPlatform] = useState(initialPlatform);
 
     function handleFirstClick() {
         let platformsCount = 0;
@@ -71,7 +72,7 @@ export default function GameDealsModal(props: Game) {
                         </IconButton>
                     </Box>
 
-                <GameDeals {...{game:game, platform:platform}}/>
+                <GameDeals {...{game:game, platform:platform, }}/>
             </Modal>
 
             <Dialog open={isDialogOpen} id="selectPlatformDialog">

@@ -17,44 +17,44 @@ import ResetPasswordVerification from "./Modules/Main/Components/ResetPasswordVe
 
 export function App() {
 	return (
-	    <div id="app">
-	        <ToastContainer
-	            position="top-center"
-	            autoClose={5000}
-	            hideProgressBar={false}
-	            newestOnTop={false}
-	            closeOnClick
-	            rtl={false}
-	            pauseOnFocusLoss
-	            draggable
-	            pauseOnHover
-	        />
+		<div id="app">
+			<ToastContainer
+				position="top-center"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+			/>
 	
-	        <BrowserRouter>
-	            <div id="appHeader" className="appDivs">
-	                <Header />
-	            </div>
+			<BrowserRouter>
+				<div id="appHeader" className="appDivs">
+					<Header />
+				</div>
 	
-	            <div id="appContent" className="appDivs">
-	                <Routes>
-	                    <Route path="/home" element={<Landing />}  />
-	                    <Route path="/gameboard" element={<GameBoard />}  />
-	                    <Route path="/login" element={<Login />}  />
-	                    <Route path="/register" element={<Register />}  />
-	                    <Route path="/game/:game" element={<GamePage />}  /> 
-	                    <Route path="/rankgame" element={<RankGame />}  /> 
-	                    <Route path="/emailvalidation" element={<EmailValidation />}  /> 
-						<Route path="/resetpassword" element={<ResetPassword />}  />
-						<Route path="/resetpasswordconfirmation" element={<ResetPasswordVerification />}  />
-	                    <Route path="/" element={<Navigate to="/home" replace />}/>
-	                </Routes>
-	            </div>
+				<div id="appContent" className="appDivs">
+					<Routes>
+						<Route path="/home" element={<Landing />}	/>
+						<Route path="/gameboard" element={<GameBoard />}	/>
+						<Route path="/login" element={<Login />}	/>
+						<Route path="/register" element={<Register />}	/>
+						<Route path="/game/:game" element={<GamePage />}	/> 
+						<Route path="/rankgame" element={<RankGame />}	/> 
+						<Route path="/emailvalidation" element={<EmailValidation />}	/> 
+						<Route path="/resetpassword" element={<ResetPassword />}	/>
+						<Route path="/resetpasswordconfirmation" element={<ResetPasswordVerification />}	/>
+						<Route path="/" element={<Navigate to="/home" replace />}/>
+					</Routes>
+				</div>
 	
-	            <div id="appFooter" className="appDivs">
-	                <Footer />
-	            </div>
-	        </BrowserRouter>
-	    </div>
+				<div id="appFooter" className="appDivs">
+					<Footer />
+				</div>
+			</BrowserRouter>
+		</div>
 	);
 }
 

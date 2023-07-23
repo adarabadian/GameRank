@@ -4,15 +4,15 @@ import gamesReducer from "./gamesReducer";
 import userDetailsReducer from "./userDetailsReducer";
 
 export const store = configureStore({
-    reducer: {
-        currenciesState :  currenciesReducer,
-        userState       :  userDetailsReducer,
-        gamesState      :  gamesReducer,
-    }, 	
+	reducer: {
+		currenciesState :	currenciesReducer,
+		userState		 :	userDetailsReducer,
+		gamesState		:	gamesReducer,
+	}, 	
 		middleware: (getDefaultMiddleware) =>
-    		getDefaultMiddleware({
-    		  serializableCheck: false,
-    		}),
+			getDefaultMiddleware({
+				serializableCheck: false,
+			}),
 
 });
 

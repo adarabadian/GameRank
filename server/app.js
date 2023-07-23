@@ -11,7 +11,7 @@ const cors = require("cors");
 const app = express();
 const path = require('path');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 app.use(express.static(path.join(__dirname, './build')));
 
@@ -26,12 +26,8 @@ app.use(express.json());
 app.use(loginFilter());
 
 const corsOptions = {
-	origin:["https://gamerank.onrender.com", 
-			"http://gamerank.onrender.com", 
-			'http://adar-projects-catalog.onrender.com',
-			'https://adar-projects-catalog.onrender.com',
-			'https://adar-projects-catalog.herokuapp.com', 
-			'http://adar-projects-catalog.herokuapp.com'], 
+	origin:["https://gamerank.adarabadian.com", 
+			"http://gamerank.adarabadian.com"], 
 	credentials: true,
 	optionSuccessStatus: 200
 }

@@ -9,22 +9,22 @@
 }
 
 #gameBoard{
-    width: -webkit-fill-available;
-    overflow-y: scroll;
+	width: -webkit-fill-available;
+	overflow-y: scroll;
 }
 
-#cardsDiv>.gameCard {    
+#cardsDiv>.gameCard {	
 	width: 21%;
-    margin: 1%;
-    padding: 1em 1em 2em 1em;
-    height: 37em;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    display: inline-flex;
+	margin: 1%;
+	padding: 1em 1em 2em 1em;
+	height: 37em;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 10px;
+	display: inline-flex;
 }
 
 #cardsDiv {
-    overflow-y: hidden;
+	overflow-y: hidden;
 	width: 100%;
 	overflow-x: hidden;
 	display: block;
@@ -114,13 +114,13 @@
 	background-clip: padding-box, border-box;
 	animation: bg-hue 2s linear infinite;
 	border-radius: 10px;
-    padding: 0 7px;
+	padding: 0 7px;
 	font-size: 1.02em;
 }
 
 @keyframes bg-hue {
 	100% {
-	  filter: hue-rotate(360deg);
+		filter: hue-rotate(360deg);
 	}
 }
 
@@ -128,13 +128,13 @@
 /* Media queries */
 /* Media queries */
 @media screen and (max-width: 1500px) {
-	#cardsDiv>.gameCard {    
+	#cardsDiv>.gameCard {	
 		width: 28%;
 	}
 }
 
 @media screen and (max-width: 1250px) {
-	#cardsDiv>.gameCard {    
+	#cardsDiv>.gameCard {	
 		width: 48%;
 		padding: 2% 0 !important;	
 	}
@@ -144,7 +144,7 @@
 }
 
 @media screen and (max-width: 700px) {
-	#cardsDiv>.gameCard {    
+	#cardsDiv>.gameCard {	
 		width: 90%;
 	}
 }

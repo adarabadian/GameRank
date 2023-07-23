@@ -1,61 +1,61 @@
 .rankGameForm{
-    width: 100%;
+	width: 100%;
 }
 
 .rankGameForm > h1{
-    margin-top: 2rem;
+	margin-top: 2rem;
 }
 .rankGameForm > div > div > p{
-    margin: 1rem 0 0 0;
-    font-size: x-large;
+	margin: 1rem 0 0 0;
+	font-size: x-large;
 }
 
 .sideBySide > div{
-    width: 33%;
-    display: inline-block;
-    vertical-align: middle;
+	width: 33%;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 
 .sideBySide > div > img{
-    max-height: 50vh;
-    width: -webkit-fill-available;
+	max-height: 50vh;
+	width: -webkit-fill-available;
 }
 
 .rankGameForm > div > div > input, textarea{
-    width: 80%;
-    font-size: large;
-    resize: none;
-    padding: 8px;
+	width: 80%;
+	font-size: large;
+	resize: none;
+	padding: 8px;
 }
 
 .rankGameForm > div > div > textarea{
-    height: 7rem;
-    font-family: Arial, Helvetica, sans-serif;
+	height: 7rem;
+	font-family: Arial, Helvetica, sans-serif;
 }
 .rankGameForm > button {
-    letter-spacing: 3px;
+	letter-spacing: 3px;
 }
 
 @media screen and (max-width: 700px) {
-    .rankGameForm > .pageHeader{
-    font-size: 2.1em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 95%;
-    }
+	.rankGameForm > .pageHeader{
+	font-size: 2.1em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 95%;
+	}
 
-    .rankGameForm > .sideBySide > div:first-child,
-    .rankGameForm > .sideBySide > div:last-child{
-        display: none;
-    }
+	.rankGameForm > .sideBySide > div:first-child,
+	.rankGameForm > .sideBySide > div:last-child{
+		display: none;
+	}
 
-    .rankGameForm > .sideBySide > div{
-        width: 100%;
-    }
-    
-    .rankGameForm > button{
-        width: 80%;
-    }
+	.rankGameForm > .sideBySide > div{
+		width: 100%;
+	}
+	
+	.rankGameForm > button{
+		width: 80%;
+	}
 }
